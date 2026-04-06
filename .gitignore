@@ -1,0 +1,11 @@
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Terraform lock file (optional depending on team policy)
+.terraform.lock.hcl
+
+# macOS
+.DS_Store
