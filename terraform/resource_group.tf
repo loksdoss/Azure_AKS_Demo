@@ -4,5 +4,4 @@ resource "azurerm_resource_group" "main" {
   location = local.location
 
   tags = local.common_tags
-
 }

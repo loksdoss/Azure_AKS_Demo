@@ -1,6 +1,6 @@
 resource "azurerm_key_vault" "kv" {
 
-  name                = "kv-${local.project_name}-${local.environment}"
+  name                = local.key_vault_name
   location            = local.location
   resource_group_name = azurerm_resource_group.main.name
 
