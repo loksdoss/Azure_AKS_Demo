@@ -31,9 +31,10 @@ jobs:
       uses: hashicorp/setup-terraform@v3
 
     - name: Terraform Init
-      run: terraform init \
-        -backend-config="key=aks-demo/${ENVIRONMENT}/terraform.tfstate" \
-        -reconfigure
+      run: |
+        terraform -chdir=terraform init \
+          -backend-config="key=aks-demo/${ENVIRONMENT}/terraform.tfstate" \
+          -reconfigure
 
     - name: Select/Create Workspace
       run: |
